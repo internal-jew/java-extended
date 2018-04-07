@@ -11,7 +11,7 @@ import com.alevel.utils.QuickSortAlgorithm;
  */
 public class Lecture2 {
 
-    private static final String FILENAME = "/Users/luver/asd.txt";
+    private static final String FILENAME = "numbers.txt";
     private static final int NEEDLE = 990050;
 
     /**
