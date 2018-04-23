@@ -13,6 +13,32 @@ class BinarySearchAlgorithm {
         // похожий, на строку "return false", которую вы видите в конце метода.
         //
         // Переменные needle и stack уже объявлены и заполнены значениями.
-        return false;
+
+        int currentMiddleOfArray = stack.length / 2;
+        int currentTopOfArray = stack.length;
+        int currentBottomOfArray = 0;
+
+        boolean isFound = false;
+
+        while (currentTopOfArray != 0 && currentMiddleOfArray != 0) {
+            if (needle == stack[currentMiddleOfArray]) {
+
+                isFound = true;
+                break;
+            }
+            if (needle > stack[currentMiddleOfArray]) {
+
+                currentBottomOfArray = currentMiddleOfArray;
+                currentMiddleOfArray = (currentTopOfArray - currentMiddleOfArray) / 2 + currentMiddleOfArray;
+            }
+            if (needle < stack[currentMiddleOfArray]) {
+
+                currentTopOfArray = currentMiddleOfArray;
+                currentMiddleOfArray = (currentTopOfArray - currentBottomOfArray) / 2 + currentBottomOfArray;
+            }
+
+
+        }
+        return isFound;
     }
 }
