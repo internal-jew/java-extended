@@ -9,8 +9,8 @@ public class QuickSortingAlgorithm implements SortingAlgorithm {
     public int[] sort(int[] source) {
         // Здесь необходимо реализовать алгоритм быстрой сортировки.
         // Это необязательное задание повышенной сложности.
-        int[] arrRes = quickSort(source, 0, source.length - 1);
-        return arrRes;
+        int[] resultArray = quickSort(source, 0, source.length - 1);
+        return resultArray;
     }
 
     private int[] quickSort(int[] array, int low, int high) {
@@ -19,16 +19,16 @@ public class QuickSortingAlgorithm implements SortingAlgorithm {
             return array;
 
         int middle = low + (high - low) / 2;
-        int supportingElement = array[middle];
+        int pivot = array[middle];
 
         int i = low, j = high;
 
         while (i <= j) {
-            while (array[i] < supportingElement) {
+            while (array[i] < pivot) {
                 i++;
             }
 
-            while (array[j] > supportingElement) {
+            while (array[j] > pivot) {
                 j--;
             }
 

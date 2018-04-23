@@ -28,6 +28,5 @@ class BinarySearchAlgorithm {
             }
         }
         return false;
-
     }
 }
