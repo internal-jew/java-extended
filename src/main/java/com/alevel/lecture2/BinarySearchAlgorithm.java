@@ -7,26 +7,13 @@ class BinarySearchAlgorithm {
 
     static boolean find(int needle, int[] stack) {
 
-        int left = 0;
-        int right = stack.length;
-        int middle;
-
-
-        while (true) {
-            middle = (left + right) / 2;
-            // условие нахождения искомого значения
-            if (stack[middle] == needle) {
-                return true;
-            }
-            // условия смещения границ для поиска
-            if (stack[middle] < needle) {
-                left = middle + 1;
-            } else
-                right = middle;
-            // условие выхода при отсутствии искомого значения
-            if (left >= right) {
-                return false;
-            }
-        }
+        // Здесь вам необходимо реализовать алгоритм бинарного поиска.
+        // Ваша задача найти число needle в массиве чисел stack.
+        // Если ваш алгоритм нашел искомое число, он должен выполнить такой код:
+        //      return true;
+        // похожий, на строку "return false", которую вы видите в конце метода.
+        //
+        // Переменные needle и stack уже объявлены и заполнены значениями.
+        return false;
     }
 }
