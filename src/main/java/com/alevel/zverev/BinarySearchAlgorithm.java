@@ -1,11 +1,11 @@
-package com.alevel.lecture2;
+package com.alevel.zverev;
 
 /**
  * TODO
  */
-class BinarySearchAlgorithm {
+public class BinarySearchAlgorithm {
 
-    static boolean find(int needle, int[] stack) {
+    public static boolean find(int needle, int[] stack) {
         // Здесь вам необходимо реализовать алгоритм бинарного поиска.
         // Ваша задача найти число needle в массиве чисел stack.
         // Если ваш алгоритм нашел искомое число, он должен выполнить такой код:
