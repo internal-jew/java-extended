@@ -1,11 +1,13 @@
-package com.alevel.lecture3;
+package com.alevel.zverev;
+
+import com.alevel.lecture3.SortingAlgorithm;
 
 /**
  * The selection sort algorithm.
  */
 public class SelectionSortingAlgorithm implements SortingAlgorithm {
 
-    @Override
+
     public int[] sort(int[] source) {
         for (int i = 0; i < source.length - 1; i++) {
 

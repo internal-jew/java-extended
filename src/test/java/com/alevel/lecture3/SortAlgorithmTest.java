@@ -1,5 +1,6 @@
 package com.alevel.lecture3;
 
+import com.alevel.zverev.SelectionSortingAlgorithm;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

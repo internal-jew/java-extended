@@ -2,6 +2,8 @@ package com.alevel.lecture2;
 
 import com.alevel.utils.IntegersFile;
 import com.alevel.utils.QuickSortAlgorithm;
+import com.alevel.zverev.BinarySearchAlgorithm;
+import com.alevel.zverev.LinearSearchAlgorithm;
 
 /**
  * The demonstrator of linear and binary search algorithms for the second lecture of
