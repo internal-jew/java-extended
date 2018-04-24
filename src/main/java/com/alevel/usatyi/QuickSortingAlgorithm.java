@@ -1,4 +1,6 @@
-package com.alevel.lecture3;
+package com.alevel.usatyi;
+
+import com.alevel.lecture3.SortingAlgorithm;
 
 /**
  * The quick sort algorithm.
@@ -53,6 +55,3 @@ public class QuickSortingAlgorithm implements SortingAlgorithm {
         }
     }
 }
-/*
-PS. Эта сортировка показалась мне интереснее, на сортировку слиянием не хватило времени :)
- */

@@ -1,5 +1,7 @@
 package com.alevel.lecture3;
 
+import com.alevel.usatyi.QuickSortingAlgorithm;
+import com.alevel.usatyi.SelectionSortingAlgorithm;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

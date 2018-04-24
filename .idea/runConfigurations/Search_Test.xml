@@ -3,7 +3,7 @@
     <module name="lectures" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="com.alevel.lecture2.*" />
+        <option name="PATTERN" value="com.alevel.usatyi.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>
