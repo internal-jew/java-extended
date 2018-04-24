@@ -6,7 +6,6 @@ import java.util.Arrays;
  * The merge sort algorithm.
  */
 public class MergeSortingAlgorithm implements SortingAlgorithm {
-
 	private int[] sorting(int[] arr) {
 		if(arr.length < 2) return arr;
 		int mid = arr.length / 2;

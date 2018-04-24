@@ -6,7 +6,6 @@ package com.alevel.lecture2;
 class LinearSearchAlgorithm {
 
     static boolean find(int needle, int[] stack) {
-
         int i = 0;
         while (i != stack.length) {
             i++;

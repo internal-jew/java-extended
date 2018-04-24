@@ -1,7 +1,5 @@
 package com.alevel.lecture3;
 
-import java.util.Arrays;
-
 /**
  * The selection sort algorithm.
  */
