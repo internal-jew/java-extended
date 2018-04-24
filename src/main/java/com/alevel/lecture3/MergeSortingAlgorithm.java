@@ -1,41 +1,50 @@
 package com.alevel.lecture3;
 
+import java.util.Arrays;
+
 /**
  * The merge sort algorithm.
  */
 public class MergeSortingAlgorithm implements SortingAlgorithm {
+	private int[] sorting(int[] arr) {
+		if(arr.length < 2) return arr;
+		int mid = arr.length / 2;
+		int[] left = Arrays.copyOfRange(arr, 0, mid);
+		int[] right = Arrays.copyOfRange(arr, mid, arr.length);
 
-    @Override
-    public int[] sort(int[] source) {
-        int[] resultArray = mergeSort(source, 0, source.length);
-        return resultArray;
-    }
+		return merge(sorting(left), sorting(right));
+	}
 
-    private int[] mergeSort(int[] numbers, int minIndex, int maxIndex) {
-        if (minIndex + 1 < maxIndex) {
-            int midIndex = (minIndex + maxIndex) / 2;
+	private static int[] merge(int[] left, int[] right) {
+		int n = left.length + right.length;
+		int[] arr = new int[n];
+		int int1 = 0;
+		int int2 = 0;
 
-            mergeSort(numbers, minIndex, midIndex);
-            mergeSort(numbers, midIndex, maxIndex);
+		for (int i = 0; i < arr.length; i++) {
+			if (int1 == left.length) {
 
-            int sizeOfTempArray = maxIndex - minIndex;
-            int[] tempArray = new int[sizeOfTempArray];
+				arr[i] = right[int2++];
+			} else if (int2 == right.length) {
 
-            int i = minIndex;
-            int j = midIndex;
+				arr[i] = left[int1++];
+			} else {
 
-            for (int k = 0; k < sizeOfTempArray; k++) {
-                if ((j >= maxIndex) || ((i < midIndex) && (numbers[i] < numbers[j]))) {
-                    tempArray[k] = numbers[i++];
-                } else {
-                    tempArray[k] = numbers[j++];
-                }
-            }
+				if (left[int1] < right[int2]) {
 
-            for (int k = 0; k < sizeOfTempArray; k++) {
-                numbers[minIndex + k] = tempArray[k];
-            }
-        }
-        return numbers;
-    }
+					arr[i] = left[int1++];
+				} else {
+					arr[i] = right[int2++];
+				}
+			}
+		}
+
+		return arr;
+	}
+
+	@Override
+	public int[] sort(int[] source) {
+
+		return sorting(source);
+	}
 }

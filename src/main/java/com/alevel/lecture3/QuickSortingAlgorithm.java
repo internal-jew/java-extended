@@ -1,5 +1,7 @@
 package com.alevel.lecture3;
 
+import java.util.Arrays;
+
 /**
  * The quick sort algorithm.
  */
@@ -7,46 +9,35 @@ public class QuickSortingAlgorithm implements SortingAlgorithm {
 
     @Override
     public int[] sort(int[] source) {
-        // Здесь необходимо реализовать алгоритм быстрой сортировки.
-        // Это необязательное задание повышенной сложности.
-        int[] resultArray = quickSort(source, 0, source.length - 1);
-        return resultArray;
-    }
+        int[] arr = {2,4,6,8,1,3,5,7};
 
-    private int[] quickSort(int[] array, int low, int high) {
+        int pilot = arr[arr.length - 1];
+        for (int i = 0; i < arr.length * 300; i++) {
+            int wall = 0;
 
-        if (low >= high)
-            return array;
-
-        int middle = low + (high - low) / 2;
-        int pivot = array[middle];
-
-        int i = low, j = high;
-
-        while (i <= j) {
-            while (array[i] < pivot) {
-                i++;
+            if (arr[i] < arr[wall]) {
+                wall = i;
             }
 
-            while (array[j] > pivot) {
-                j--;
+
+
+            for (int j = 0; j - 1 < pilot; j++) {
+                int celem = arr[i];
+
+                if (arr[i] < pilot) {
+                    int temp = celem;
+                    arr[wall] = celem;
+                    arr[wall + 1] = temp;
+                    arr[wall + 1] = arr[pilot];
+                } else {
+                    arr[wall + 1] = celem;
+                    arr[wall + 1] = arr[pilot];
+                }
             }
 
-            if (i <= j) {
-                int temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
-                i++;
-                j--;
-            }
+            System.out.println(Arrays.toString(arr));
         }
 
-        if (low < j)
-            quickSort(array, low, j);
-
-        if (high > i)
-            quickSort(array, i, high);
-
-        return array;
+        return new int[0];
     }
 }
