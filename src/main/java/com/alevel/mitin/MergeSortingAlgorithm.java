@@ -2,12 +2,10 @@ package com.alevel.mitin;
 
 import com.alevel.lecture3.SortingAlgorithm;
 
-
 /**
  * The mergeSort sort algorithm.
  */
 public class MergeSortingAlgorithm implements SortingAlgorithm {
-
     private int[] mergeSort(int[] firstArray, int[] secondArray) {
         int firstCounter = 0;
         int secondCounter = 0;
@@ -33,10 +31,8 @@ public class MergeSortingAlgorithm implements SortingAlgorithm {
         }
         return mergedArray;
     }
-
     @Override
     public int[] sort(int[] source) {
-
         if (source.length == 1 || source.length == 0) {
             return source;
         } else {
@@ -45,7 +41,6 @@ public class MergeSortingAlgorithm implements SortingAlgorithm {
             int secondArray[] = new int[rightBound - middle];
             System.arraycopy(source, leftBound, firstArray, 0, firstArray.length);
             System.arraycopy(source, middle, secondArray, 0, secondArray.length);
-
             return mergeSort(sort(firstArray), sort(secondArray));
         }
     }
