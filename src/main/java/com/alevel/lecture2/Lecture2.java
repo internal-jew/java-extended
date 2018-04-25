@@ -1,5 +1,7 @@
 package com.alevel.lecture2;
 
+import com.alevel.usatyi.BinarySearchAlgorithm;
+import com.alevel.usatyi.LinearSearchAlgorithm;
 import com.alevel.utils.IntegersFile;
 import com.alevel.utils.QuickSortAlgorithm;
 
