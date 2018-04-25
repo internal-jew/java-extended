@@ -1,6 +1,6 @@
 package com.alevel.lecture3;
 
- /**
+/**
  * The merge sort algorithm.
  */
 public class MergeSortingAlgorithm implements SortingAlgorithm {
