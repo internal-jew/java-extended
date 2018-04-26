@@ -13,10 +13,6 @@ class LinearSearchAlgorithm {
         // похожий, на строку "return false", которую вы видите в конце метода.
         //
         // Переменные needle и stack уже объявлены и заполнены значениями.
-        for (int i = 0; i < stack.length; i++) {
-            if (stack[i] == needle)
-                return true;
-        }
         return false;
     }
 }
