@@ -1,4 +1,4 @@
-package com.alevel.lecture6;
+package com.alevel.mitin;
 
 //6. Дано действительное число x и массив A[n].
 // В массиве найти два члена, среднее
@@ -17,11 +17,11 @@ class Task6 {
         findMiddleArithmetic(arr, x);
     }
 
-    public static void findMiddleArithmetic(int A[], int x) {
+    private static void findMiddleArithmetic(int A[], int x) {
 
         int leftCount1 = 0, leftCount2 = 0,
                 rightCount1 = 0, rightCount2 = 0;
-        float temp = 0, left = x, right = x;
+        float temp, left = x, right = x;
 
         for (int i = 0; i < A.length; i++) {
             for (int j = i+1; j < A.length; j++) {

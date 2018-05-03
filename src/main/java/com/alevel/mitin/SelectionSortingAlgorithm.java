@@ -23,7 +23,6 @@ public class SelectionSortingAlgorithm implements SortingAlgorithm {
                 source[count] = temp;
             }
         }
-
         return source;
     }
 }

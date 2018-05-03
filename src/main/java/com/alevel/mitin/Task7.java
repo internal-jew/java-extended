@@ -1,4 +1,4 @@
-package com.alevel.lecture6;
+package com.alevel.mitin;
 
 import java.util.Arrays;
 
@@ -11,7 +11,7 @@ public class Task7 {
         findNumbers(array);
     }
 
-    public static void findNumbers(int[] arr) {
+    private static void findNumbers(int[] arr) {
         int counter = 0;
         int[] mass = Arrays.copyOf(arr, arr.length);
         Arrays.sort(mass);
@@ -23,9 +23,7 @@ public class Task7 {
         if (arr[arr.length - 1] != arr[arr.length - 2]) {
             counter++;
         }
-//        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(mass));
         System.out.println("mass length = " + arr.length + "; numbers = " + counter);
     }
-
-
 }

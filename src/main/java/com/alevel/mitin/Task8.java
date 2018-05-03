@@ -1,4 +1,4 @@
-package com.alevel.lecture6;
+package com.alevel.mitin;
 
 //8. Задан целочисленный массив размерности N.
 // Есть ли среди элементов массива простые числа?
@@ -11,7 +11,7 @@ public class Task8 {
         findSimpleNumbers(arr);
     }
 
-    static boolean simple(int sn) {
+    private static boolean simple(int sn) {
         if (sn != 0 && sn != 1) {
             for (int j = 2; j < sn; j++) {
                 if (sn % j == 0) {
@@ -22,7 +22,7 @@ public class Task8 {
         } else return false;
     }
 
-    static void findSimpleNumbers(int[] array) {
+    private static void findSimpleNumbers(int[] array) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < array.length; i++) {
             if (array[i] != 0 && array[i] != 1) {
@@ -32,7 +32,6 @@ public class Task8 {
                     sb.append(", ");
                 }
             }
-
         }
         System.out.println(sb.toString());
     }

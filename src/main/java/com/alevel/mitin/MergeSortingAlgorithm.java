@@ -7,25 +7,25 @@ import com.alevel.lecture3.SortingAlgorithm;
  */
 public class MergeSortingAlgorithm implements SortingAlgorithm {
     private int[] mergeSort(int[] firstArray, int[] secondArray) {
-        int firstCounter = 0;
-        int secondCounter = 0;
+        int firstArrayEdge = 0;
+        int secondArrayEdge = 0;
         int mergedArray[] = new int[firstArray.length + secondArray.length];
-        for (int iterator = 0; iterator < mergedArray.length; iterator++) {
-            if (firstCounter < firstArray.length && secondCounter < secondArray.length) {
-                if (firstArray[firstCounter] < secondArray[secondCounter]) {
-                    mergedArray[iterator] = firstArray[firstCounter];
-                    firstCounter++;
+        for (int i = 0; i < mergedArray.length; i++) {
+            if (firstArrayEdge < firstArray.length && secondArrayEdge < secondArray.length) {
+                if (firstArray[firstArrayEdge] < secondArray[secondArrayEdge]) {
+                    mergedArray[i] = firstArray[firstArrayEdge];
+                    firstArrayEdge++;
                 } else {
-                    mergedArray[iterator] = secondArray[secondCounter];
-                    secondCounter++;
+                    mergedArray[i] = secondArray[secondArrayEdge];
+                    secondArrayEdge++;
                 }
             } else {
-                if (firstCounter >= firstArray.length) {
-                    mergedArray[iterator] = secondArray[secondCounter];
-                    secondCounter++;
+                if (firstArrayEdge >= firstArray.length) {
+                    mergedArray[i] = secondArray[secondArrayEdge];
+                    secondArrayEdge++;
                 } else {
-                    mergedArray[iterator] = firstArray[firstCounter];
-                    firstCounter++;
+                    mergedArray[i] = firstArray[firstArrayEdge];
+                    firstArrayEdge++;
                 }
             }
         }
@@ -33,7 +33,7 @@ public class MergeSortingAlgorithm implements SortingAlgorithm {
     }
     @Override
     public int[] sort(int[] source) {
-        if (source.length == 1 || source.length == 0) {
+        if (source.length <= 1) {
             return source;
         } else {
             int leftBound = 0, rightBound = source.length, middle = (leftBound + rightBound) / 2;
