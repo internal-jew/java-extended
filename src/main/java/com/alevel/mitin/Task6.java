@@ -5,53 +5,49 @@ package com.alevel.mitin;
 // рифметическое которых ближе всего к x.
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 class Task6 {
     public static void main(String[] args) {
 //        float aa = 5, bb = 6, cc = (5f + 6f) / 2f;
 //        System.out.println(cc);
         int x = 17;
-        int[] arr = {0, 3, 4, 5, 7, 8, 10, 12, 25, 29, 35, 64, 70};
+        int[] arr = {0, 3, 4, 7, 8, 10, 12, 25, 29, 35, 64, 70};
+        Scanner sc = new Scanner(System.in);
+//        int[] mass = new int[10];
+//        System.out.println("Pleas enter mass of int length = 10");
+//        for (int i = 0; i < mass.length; i++) {
+//            mass[i] = sc.nextInt();
+//        }
+        System.out.println("Enter X: ");
+        x = sc.nextInt();
 //        Arrays.sort(arr);
 //        System.out.println(Arrays.toString(arr));
         findMiddleArithmetic(arr, x);
     }
-
     private static void findMiddleArithmetic(int A[], int x) {
-
-        int leftCount1 = 0, leftCount2 = 0,
-                rightCount1 = 0, rightCount2 = 0;
-        float temp, left = x, right = x;
-
-        for (int i = 0; i < A.length; i++) {
-            for (int j = i+1; j < A.length; j++) {
-                temp = (A[i] + A[j]) / 2f;
-                if (temp >= left && temp <= x) {
-                    left = temp;
-                    leftCount1 = A[i];
-                    leftCount2 = A[j];
-//                    System.out.println("left = " + left + "; middle = " + temp);
+        int first = A[0], second = A[1];
+        double average = ((A[0] + A[1]) / 2f), minimum = Math.abs(x - average);
+        for (int i = 1; i < A.length; i++) {
+            for (int j = 0; j < A.length; j++) {
+                if (j == i) continue;
+                average = Math.abs(x - ((A[i] + A[j]) / 2f));
+//                float abs = Math.abs(x - ((A[i] + A[j]) / 2f));
+                if (average <= minimum) {
+                    minimum = average;
+                    first = A[i];
+                    second = A[j];
+                    System.out.println("A[i]: " + A[i] + "; A[j]: " + A[j] + "; dist: " + average);
                 }
-                if (temp <= right && temp >= x) {
-                    right = temp;
-                    rightCount1 = A[i];
-                    rightCount2 = A[j];
-//                    System.out.println("right = " + right + "; middle = " + temp);
-                }
-                if (temp == x) {
-//                    System.out.println("A[i] = " + A[i] + "; A[j] = " + A[j]);
-                    break;
+                if (average == 0) {
+                    System.out.println("XXX A[i]: " + A[i] + "; A[j]: " + A[j] + " dist: " + average);
+                    return;
                 }
             }
+//            if (minimum == 0) break;
         }
-        if ((left - x) > (right - x)) {
-            temp = (rightCount1 + rightCount2) / 2f;
-            System.out.println("right - A[i] = " + rightCount1 + "; A[j] = "
-                    + rightCount2 + "; middle = " + temp);
-        } else {
-            temp = (leftCount1 + leftCount2) / 2f;
-            System.out.println("Left - A[i] = " + leftCount1 + "; A[j] = "
-                    + leftCount2 + "; middle = " + temp);
-        }
+        average = (first + second) / 2f;
+        System.out.println("Left - A[i] = " + first + "; A[j] = "
+                + second + "; middle = " + average);
     }
 }
