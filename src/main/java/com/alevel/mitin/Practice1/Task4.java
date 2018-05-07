@@ -1,4 +1,4 @@
-package com.alevel.mitin;
+package com.alevel.mitin.Practice1;
 
 //4. Дана последовательность действительных
 // чисел a1 ≤ a2 ≤ ... ≤ аn. Вставить действительное

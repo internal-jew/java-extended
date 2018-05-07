@@ -1,4 +1,4 @@
-package com.alevel.mitin;
+package com.alevel.mitin.Practice1;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package com.alevel.mitin;
+package com.alevel.mitin.Practice1;
 
 //8. Задан целочисленный массив размерности N.
 // Есть ли среди элементов массива простые числа?

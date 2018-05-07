@@ -1,4 +1,4 @@
-package com.alevel.mitin;
+package com.alevel.mitin.Practice1;
 
 //6. Дано действительное число x и массив A[n].
 // В массиве найти два члена, среднее
@@ -11,7 +11,7 @@ class Task6 {
     public static void main(String[] args) {
 //        float aa = 5, bb = 6, cc = (5f + 6f) / 2f;
 //        System.out.println(cc);
-        int x = 17;
+        int x;
         int[] arr = {0, 3, 4, 7, 8, 10, 12, 25, 29, 35, 64, 70};
         Scanner sc = new Scanner(System.in);
 //        int[] mass = new int[10];
