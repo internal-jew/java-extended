@@ -4,35 +4,35 @@ import java.util.Arrays;
 
 public class MyArrayList<T> {
 
-    Object[] data;
+    T[] data;
     int size;
     int capacity;
 
     public MyArrayList() {
-        this.data = new Object[10];
+        this.data = getArray(10);
         capacity = 10;
     }
 
     public MyArrayList(int size) {
-        this.data = new Object[size];
+        this.data = getArray(size);
         capacity = size;
+    }
+
+    private T[] getArray(int size) {
+        return (T[]) new Object[size];
     }
 
     public void add(int index, T object) {
         if ((size + 1) >= data.length) {
-            System.out.println("capacity add of index");
-            int newLength = data.length+data.length/2;
-            Object[] newArray = new Object[newLength];
+            int newLength = data.length + data.length / 2;
+            T[] newArray = getArray(newLength);
             capacity = newLength;
             System.arraycopy(data, 0, newArray, 0, index);
-//            System.out.println("Sirst copy: "+(T) newArray.toString());
-            System.arraycopy(data, index, newArray, index+1, newArray.length-index);
-//            System.out.println("Second copy: "+(T) newArray.toString());
+            System.arraycopy(data, index, newArray, index + 1, newArray.length - index);
             newArray[index] = object;
             data = newArray;
-        }else {
-            System.out.println("add of index ");
-            System.arraycopy(data, index-1 , data, index, size-index+1);
+        } else {
+            System.arraycopy(data, index - 1, data, index, size - index + 1);
             data[index] = object;
         }
         size++;
@@ -40,13 +40,11 @@ public class MyArrayList<T> {
 
     public void add(T object) {
         if (size >= data.length) {
-            System.out.println("Capacity add");
             int newLength = data.length + data.length / 2;
             capacity = newLength;
             data = Arrays.copyOf(data, newLength);
-            data[size]=object;
+            data[size] = object;
         } else {
-            System.out.println("add ");
             data[size] = object;
         }
         size++;
@@ -54,21 +52,18 @@ public class MyArrayList<T> {
 
     public boolean contains(T object) {
         for (int i = 0; i < size; i++) {
-//            System.out.println(data[i].getClass().getNameString());
             if (data[i].equals(object)) return true;
         }
         return false;
     }
 
     public T get(int index) {
-        return (T) data[index];
+        return data[index];
     }
 
-    public T remove(int i) {
-        T t = (T) data[i];
-//        System.arraycopy(data, 0, newArray, 0, index);
-//        System.arraycopy(data, 0, newArray, 0, index);
-        data = null;
+    public T remove(int index) {
+        T t = data[index];
+        System.arraycopy(data, index+1, data, index, size-index);
         size--;
         return t;
     }
