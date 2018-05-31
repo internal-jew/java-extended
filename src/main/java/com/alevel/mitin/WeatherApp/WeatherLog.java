@@ -7,7 +7,7 @@ import java.nio.file.*;
 
 import java.util.List;
 
-import static com.alevel.mitin.WeatherApp.Temperature.isValid;
+import static com.alevel.mitin.WeatherApp.Temperature.*;
 
 public class WeatherLog {
 
@@ -24,6 +24,7 @@ public class WeatherLog {
         if (isValid(temper)) {
 
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILENAME, true))) {
+                writer.newLine();
                 writer.write(temper);
             } catch (IOException e) {
                 e.printStackTrace();

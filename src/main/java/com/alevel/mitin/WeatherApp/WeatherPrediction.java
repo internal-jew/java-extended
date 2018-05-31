@@ -11,7 +11,6 @@ public class WeatherPrediction {
 
     public static WeatherPrediction basedOn(WeatherLog weatherLog) {
         //получить все записи погоды
-
         List<String> listReports = weatherLog.getReport();
         return new WeatherPrediction(listReports);
     }
@@ -19,6 +18,4 @@ public class WeatherPrediction {
     public String getValue() {
         return reports.get(reports.size() - 1);
     }
-
-
 }
