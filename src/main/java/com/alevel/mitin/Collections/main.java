@@ -35,38 +35,46 @@ public class main {
             System.out.println(li.toString()+"S: " + li.size + "; C: " + li.capacity);
         }
 
-//        SomeLinkedList<Cats> ls = new SomeLinkedList<Cats>();
-//        System.out.println("size = "+ls.size);
-//        System.out.println("add first bars 1");
-//        ls.addFirst(new Cats("bars 1", 1));
-//        System.out.println("first: "+ls.getFirst().getNameString());
-//        System.out.println("Last: "+ls.getLast().getNameString());
-//        System.out.println("size = "+ls.size);
-//        System.out.println("add last bars 2");
-//        ls.addLast(new Cats("bars 2", 2));
-//        System.out.println("size = "+ls.size);
-//        System.out.println("first: "+ls.getFirst().getNameString());
-//        System.out.println("Last: "+ls.getLast().getNameString());
-//        System.out.println("add last bars 3");
-//        ls.addLast(new Cats("bars 3", 3));
-//        System.out.println("size = "+ls.size);
-//        System.out.println("first: "+ls.getFirst().getNameString());
-//        System.out.println("Last: "+ls.getLast().getNameString());
-//        System.out.println("add first bars 4");
-//        ls.addFirst(new Cats("bars 4", 1));
-//        System.out.println("first: "+ls.getFirst().getNameString());
-//        System.out.println("Last: "+ls.getLast().getNameString());
-//        System.out.println("size = "+ls.size);
-//
-//        System.out.println("remove first name = "+ls.removeFirst().getNameString());
-//        System.out.println("first: "+ls.getFirst().getNameString());
-//        System.out.println("Last: "+ls.getLast().getNameString());
-//        System.out.println("size = "+ls.size);
-//
-//        System.out.println("remove last name = "+ls.removeLast().getNameString());
-//        System.out.println("first: "+ls.getFirst().getNameString());
-//        System.out.println("Last: "+ls.getLast().getNameString());
-//        System.out.println("size = "+ls.size);
+        SomeLinkedList<Cats> ls = new SomeLinkedList<Cats>();
+        System.out.println("size = "+ls.size);
+        System.out.println("add first bars 1");
+        ls.addFirst(new Cats("bars 1", 1));
+        System.out.println("first: "+ls.getFirst().getNameString());
+        System.out.println("Last: "+ls.getLast().getNameString());
+        System.out.println("size = "+ls.size);
+        System.out.println("add last bars 2");
+        ls.addLast(new Cats("bars 2", 2));
+        System.out.println("size = "+ls.size);
+        System.out.println("first: "+ls.getFirst().getNameString());
+        System.out.println("Last: "+ls.getLast().getNameString());
+        System.out.println("add last bars 3");
+        ls.addLast(new Cats("bars 3", 3));
+        System.out.println("size = "+ls.size);
+        System.out.println("first: "+ls.getFirst().getNameString());
+        System.out.println("Last: "+ls.getLast().getNameString());
+        System.out.println("add first bars 4");
+        ls.addFirst(new Cats("bars 4", 1));
+        System.out.println("first: "+ls.getFirst().getNameString());
+        System.out.println("Last: "+ls.getLast().getNameString());
+        System.out.println("size = "+ls.size);
+
+        System.out.println("remove first name = "+ls.removeFirst().getNameString());
+        System.out.println("first: "+ls.getFirst().getNameString());
+        System.out.println("Last: "+ls.getLast().getNameString());
+        System.out.println("size = "+ls.size);
+
+        System.out.println("remove last name = "+ls.removeLast().getNameString());
+        System.out.println("first: "+ls.getFirst().getNameString());
+        System.out.println("Last: "+ls.getLast().getNameString());
+        System.out.println("size = "+ls.size);
+        System.out.println("remove last name = "+ls.removeLast().getNameString());
+        System.out.println("first: "+ls.getFirst().getNameString());
+        System.out.println("Last: "+ls.getLast().getNameString());
+        System.out.println("size = "+ls.size);
+        System.out.println("remove last name = "+ls.removeLast().getNameString());
+        System.out.println("first: "+ls.getFirst().getNameString());
+        System.out.println("Last: "+ls.getLast().getNameString());
+        System.out.println("size = "+ls.size);
 
 //        int oldCapacity = 10000;
 //        int cpt = oldCapacity + (oldCapacity >> 1);

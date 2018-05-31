@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class MyArrayList<T> {
 
-    T[] data;
+    private T[] data;
     int size;
     int capacity;
 
@@ -51,6 +51,7 @@ public class MyArrayList<T> {
     }
 
     public boolean contains(T object) {
+        if (size == 0) return false;
         for (int i = 0; i < size; i++) {
             if (data[i].equals(object)) return true;
         }
@@ -58,12 +59,14 @@ public class MyArrayList<T> {
     }
 
     public T get(int index) {
+        if (size == 0) return null;
         return data[index];
     }
 
     public T remove(int index) {
+        if (size == 0) return null;
         T t = data[index];
-        System.arraycopy(data, index+1, data, index, size-index);
+        System.arraycopy(data, index + 1, data, index, size - index);
         size--;
         return t;
     }

@@ -40,6 +40,7 @@ public class SomeLinkedList<T> {
     }
 
     public T removeFirst() {
+//        if (isUnicle()) return null;
         Node<T> tt = first;
         first = first.nextNode;
         first.previousNode = null;
@@ -48,6 +49,7 @@ public class SomeLinkedList<T> {
     }
 
     public T removeLast() {
+//        if (isUnicle()) return null;
         Node<T> tt = last;
         last = last.previousNode;
         last.nextNode = null;
@@ -61,6 +63,10 @@ public class SomeLinkedList<T> {
 
     public boolean isLast(Node node) {
         return node.previousNode != null && node.nextNode == null;
+    }
+
+    private boolean isUnicle() {
+        return last == null && first == null;
     }
 
     private static class Node<T> {
